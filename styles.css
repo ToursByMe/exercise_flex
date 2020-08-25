@@ -1,0 +1,100 @@
+/*
+COLORES UTILIZADOS
+ #2d4059
+ #ea5455
+ #f07b3f
+
+
+ web ref
+ https://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=row&flex-wrap=wrap&justify-content=space-around&align-items=flex-start&align-content=center&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto
+*/
+
+
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    /*eje principal*/
+    flex-direction: column;
+}
+.header, .section, .footer{
+
+    background-color: black;
+
+}
+
+.menu{
+    background-color: #2d4059;
+    display: flex;
+}
+
+    .logo, .nav,.social{
+    background-color: #ea5455;
+}
+    .nav{
+        /*no significa que sea 5 veces más grande
+        significa que, si tienen el espacio requerido
+        cogerá cinco veces más espacio*/
+        flex: 5 1 auto;
+    }
+    .logo{
+        flex: 1 1 auto;
+    }
+    .social{
+        flex: 1 1 auto;
+    }
+
+.texto-principal{
+    background-color: #f07b3f;
+}
+    h1{
+        background-color: #ffd460;
+    }
+
+
+.section{
+    display: flex;
+    flex-direction: row;
+}
+.articulos {
+background-color: #4e4e6a;
+flex: 2 1 auto;
+display: flex;
+flex-wrap: wrap;
+
+
+}
+    .article{
+        background-color: #1f6cb0;
+        flex: 1 1 40%;
+    }
+
+    .navegacion{
+        background-color: #70a3c4;
+        flex-basis: 100%;
+    }
+    
+.aside{
+ background-color: #f73f52;
+ flex: 1 1 auto;
+
+}
+        .publicidad{
+            background-color: #ffea85;
+        }
+
+.pie{
+
+    background-color: #e6af20;
+}
+
+/*medias*/
+@media all and (max-width: 600px){
+
+    .section{
+        flex-direction: column;
+    }
+}
